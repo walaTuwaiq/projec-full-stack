@@ -1,0 +1,29 @@
+body{
+    background-image: url("https://www.ra2ed.com/big/2OFF%20s.jpg");
+}
+
+#Navbar{
+display: flex;
+/* justify-content: space-between; */
+align-items: center;
+background-color: rgba(139, 179, 180, 0.137);
+
+}
+.butonLogin{
+    margin: 0;
+    padding: 70px 30px;
+}
+
+.nav-span{
+    /* display: flex;
+    justify-content: space-evenly; */
+    /* border: 1px solid red; */
+    /* margin-left: 20px; */
+}
+
+.nav-link{
+    margin-left: 20px;
+    display: flex;
+    
+    /* justify-content: space-between; */
+}
