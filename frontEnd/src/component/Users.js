@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router'
+import NavBar from './NavBar'
 
-export default function Users() {
+export default function Users({token}) {
     const [users, setUsers] = useState([])
     const history = useHistory()
 
@@ -20,18 +21,21 @@ const goToUser=(id)=>{
 }
 
     return (
-        <div>
+        <div className="user-page">
+            <NavBar token={token}/>
+        <div className="user-container">
             {
                 users.map((elem,index)=>{
-                    return <div key={index}>
+                    return <div className="user" key={index}>
+                        <img src={elem.imageProfile} />
                         <h3>{elem.account}</h3>
                         <p>{elem.description}</p>
-                        <img src={elem.imageProfile} />
-                        <button onClick={()=>{goToUser(elem._id)}}>Go</button>
+                        <button onClick={()=>{goToUser(elem._id)}}>Open profile</button>
                         { console.log(elem._id)}
                     </div>
                 })
             }
+        </div>
         </div>
     )
 }
